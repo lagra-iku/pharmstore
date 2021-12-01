@@ -1,0 +1,64 @@
+<%- include('../_partial/_header'); -%>
+
+<div class="container ptv">
+    <h3 class="text-center mb-4 fw-bold">Add Patient Visit</h3>
+    <h5 class="mt-3 underline">Personal Details</h5>
+    <form action="/action_page.php">
+        <div class="row mb-3 mt-3">
+            <div class="col-md-4">
+                <label for="firstname" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="firstname" placeholder="" name="first_name" required>
+            </div>
+            <div class="col-md-4">
+                <label for="surname" class="form-label">Surname:</label>
+                <input type="text" class="form-control" id="surname" placeholder="" name="surname" required>   
+            </div>
+            <div class="col-md-4">
+                <label for="othername" class="form-label">Other Name:</label>
+                <input type="text" class="form-control" id="othername" placeholder="" name="other_name">  
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="" name="age" required>
+            </div>
+            <div class="col-md-4">
+                <label for="address" class="form-label">Address:</label>
+                <input type="text" class="form-control" id="address" placeholder="" name="address" required>   
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+
+        <h5 class="mt-5 mb-3 underline">Visit Details</h5>
+
+        <div class="mb-3">
+          <label for="pastMedicalHistory" class="form-label">Past Medical History: <i class="fas fa-eye"></i></label>
+          <textarea class="form-control" id="pastMedicalHistory" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="presentingcomplain
+            " class="form-label">Presenting Complain:</label>
+            <textarea class="form-control" id="presentingcomplain" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="preferentialdiagnosis" class="form-label">Preferential Diagnosis:</label>
+            <textarea class="form-control" id="preferentialdiagnosis" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="managementplan" class="form-label">Management Plan:</label>
+            <textarea class="form-control" id="managementplan" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="drugtreatment" class="form-label">Drug Treatment:</label>
+            <textarea class="form-control" id="drugtreatment" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="comments" class="form-label">Comments:</label>
+            <textarea class="form-control" id="comments" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mb-5 text-right">Submit</button>
+      </form>
+</div>
+
+<%- include('../_partial/_footer'); -%>

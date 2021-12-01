@@ -488,3 +488,13 @@ footer {
     background: #1b363e !important;
     color: white;
 }
+
+/* Forms */
+.underline{
+    width: 50%;
+    border-bottom: 3px double #00b582;
+}
+
+.fas, .fa, .fa-solid {
+  color: #00b582;
+}

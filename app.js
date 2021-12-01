@@ -2,7 +2,6 @@ var express = require("express");
 var bodyParser = require('body-parser')
 var { Client } = require('pg');
 var path = require("path");
-
 var app = express();
 
 app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")))
@@ -21,7 +20,7 @@ app.use("/", require("./routes/web"));
 app.use("/api", require("./routes/api"));
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+ connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
@@ -29,15 +28,15 @@ const client = new Client({
 
 client.connect();
 
-app.get('/store', function (req, res, next) {
-  client.query('SELECT * FROM patients', function (err, result) {
-      if (err) {
-          console.log(err);
-          res.status(400).send(err);
-      }
-      res.status(200).send(result.rows);
-  });
-});
+// app.get('/store', function (req, res, next) {
+//   client.query('SELECT * FROM patients', function (err, result) {
+//       if (err) {
+//           console.log(err);
+//           res.status(400).send(err);
+//       }
+//       res.status(200).send(result.rows);
+//   });
+// });
 
 
 
